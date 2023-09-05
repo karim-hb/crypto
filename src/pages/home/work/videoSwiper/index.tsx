@@ -10,6 +10,7 @@ import {
   SwiperSlide,
 } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import Palyer from "./player";
 
 const VideoSwiper = () => {
   const [playing, setPlaying] = useState(false);
@@ -45,45 +46,7 @@ const VideoSwiper = () => {
             <Box sx={{ width: "400px", height: "250px" }}>
               {activeSlideIndex === 0 ? (
                 <>
-                  {" "}
-                  <ReactPlayer
-                    ref={playerRef}
-                    url="https://crypto.com/__assets/static/desktop-video-f4ccf3681da98b40f76810dff139de86.mp4"
-                    width="100%"
-                    height="auto"
-                    playing={playing}
-                    onProgress={handleProgress}
-                  />
-                  <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
-                    {playing ? (
-                      <IconButton onClick={handlePlayPause}>
-                        {" "}
-                        <img src="/images/play.svg" alt="" />{" "}
-                      </IconButton>
-                    ) : (
-                      <IconButton onClick={handlePlayPause}>
-                        <PlayArrowIcon
-                          sx={{
-                            color: "#605D62",
-                            width: "16px",
-                            height: "16px",
-                          }}
-                        />
-                      </IconButton>
-                    )}
-                    <Box
-                      sx={{ width: "100%", height: "2px", background: "#000" }}
-                    >
-                      <Box
-                        sx={{
-                          width: Math.round(played * 100),
-                          height: "2px",
-                          background: "#31E1F7",
-                        }}
-                      ></Box>
-                    </Box>
-                    {/*     <div>Progress: {Math.round(played * 100)}%</div> */}
-                  </Box>
+                  <Palyer />
                 </>
               ) : (
                 <>
@@ -145,57 +108,19 @@ const VideoSwiper = () => {
               )}{" "}
             </Box>
           </SwiperSlide>
-  
         </SwiperCore>
       ) : (
         <SwiperCore
-        navigation={true} slidesPerView={1} modules={[Navigation]} className="mySwiper4"
-         freeMode={false}
+          navigation={true}
+          slidesPerView={1}
+          modules={[Navigation]}
+          className="mySwiper4"
+          freeMode={false}
         >
           <SwiperSlide>
             {" "}
-            <Box >
-              <>
-                {" "}
-                <ReactPlayer
-                  ref={playerRef}
-                  url="https://crypto.com/__assets/static/desktop-video-f4ccf3681da98b40f76810dff139de86.mp4"
-                  width="100%"
-                  height="auto"
-                  playing={playing}
-                  onProgress={handleProgress}
-                />
-                <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
-                  {playing ? (
-                    <IconButton onClick={handlePlayPause}>
-                      {" "}
-                      <img src="/images/play.svg" alt="" />{" "}
-                    </IconButton>
-                  ) : (
-                    <IconButton onClick={handlePlayPause}>
-                      <PlayArrowIcon
-                        sx={{
-                          color: "#605D62",
-                          width: "16px",
-                          height: "16px",
-                        }}
-                      />
-                    </IconButton>
-                  )}
-                  <Box
-                    sx={{ width: "100%", height: "2px", background: "#000" }}
-                  >
-                    <Box
-                      sx={{
-                        width: Math.round(played * 100),
-                        height: "2px",
-                        background: "#31E1F7",
-                      }}
-                    ></Box>
-                  </Box>
-                  {/*     <div>Progress: {Math.round(played * 100)}%</div> */}
-                </Box>
-              </>
+            <Box>
+              <> </>
             </Box>
           </SwiperSlide>
           <SwiperSlide>
@@ -243,7 +168,6 @@ const VideoSwiper = () => {
               </>
             </Box>
           </SwiperSlide>
-
         </SwiperCore>
       )}
     </Box>
@@ -257,7 +181,7 @@ interface CustomSwiperProps extends SwiperCoreProps {
   onSlideChange?: any;
   modules?: any;
   navigation?: any;
-  freeMode?:boolean
+  freeMode?: boolean;
 }
 
 const SwiperCore: React.FC<CustomSwiperProps> = ({ children, ...rest }) => {

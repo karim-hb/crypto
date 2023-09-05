@@ -3,7 +3,7 @@ import React from "react";
 
 const Details: React.FC<MyComponentProps> = ({ image, title, description }) => {
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box sx={{ position: "relative" , width:{md:"278px"} }}>
       <Box
         sx={{
           position: "absolute",
@@ -17,7 +17,7 @@ const Details: React.FC<MyComponentProps> = ({ image, title, description }) => {
       </Box>
 
       <Box
-        sx={{ py: {md:8 , xs:5}, px: {md:6 , xs:3}, bgcolor: "background.default", maxWidth: "300px" }}
+        sx={{ py: {md:8 , xs:5}, px: {md:2 , xs:3}, bgcolor: "background.default", maxWidth: "300px" }}
       >
         <Typography sx={{ mt: 7 }} variant="h3">
           {title}

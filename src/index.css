@@ -70,3 +70,25 @@ button {
     font-size: 14px !important;
   }
 }
+input[type='range'] {
+  overflow: hidden;
+ -webkit-appearance: none;
+  background-color: #000;
+  width: 100%;
+  cursor: pointer !important;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 3px;
+  -webkit-appearance: none;
+  color: #31e1f7;
+  margin-top: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 3px;
+  -webkit-appearance: none;
+  height: 3px;
+  cursor: pointer !important;  background: #31e1f7;
+  box-shadow: -200px 0 0 200px #43e5f7;
+}

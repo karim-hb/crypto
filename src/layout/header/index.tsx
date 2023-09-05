@@ -4,7 +4,7 @@ import React from "react";
 const Header = () => {
   return (
     <Box sx={{ pt: 2 }} component={"header"}>
-      <Container maxWidth={"xl"}>
+      <Box sx={{ maxWidth: "1370px", mx: "auto", px: "10px"  , mb:1}}>
         <Box
           sx={{
             display: "grid",
@@ -36,7 +36,7 @@ const Header = () => {
             </Typography>
           </Box>
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 };

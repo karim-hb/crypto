@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Box } from "@mui/material";
 import AllDigits from "./allDigits";
 import Blogs from "./blog";
 import Hero from "./hero";
@@ -8,10 +8,10 @@ import Work from "./work";
 const Home = () => {
   return (
     <>
-      {" "}
-      <Container sx={{ mt: 3 }} maxWidth="xl">
+     
+    {" "}   <Box sx={{ maxWidth: "1370px", mx: "auto", px: "10px" }}>
         <Hero />
-      </Container>
+      </Box>
       <AllDigits />
       <WhoWeAre />
       <Work />
