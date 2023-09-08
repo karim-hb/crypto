@@ -1,12 +1,12 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React, { Fragment } from "react";
 // Import Swiper React components
 import {
   Swiper,
   SwiperSlide,
   SwiperProps as SwiperCoreProps,
 } from "swiper/react";
-import { Autoplay ,FreeMode} from "swiper/modules";
+import { Autoplay, FreeMode } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -28,7 +28,17 @@ const SwiperCore: React.FC<CustomSwiperProps> = ({ children, ...rest }) => {
 
 const AllDigits = () => {
   return (
-    <Box sx={{ my: 2 }}>
+    <Box
+      sx={{
+        position: "fixed",
+        bottom: 0,
+        width: "100%",
+        left: 0,
+        py: 1,
+        bgcolor: "background.default",
+        zIndex: 1000,
+      }}
+    >
       <SwiperCore
         autoplay={{
           delay: 1000,
@@ -37,19 +47,19 @@ const AllDigits = () => {
         loop={true}
         slidesPerView={"auto"}
         spaceBetween={30}
-        className="mySwiper"
+        className="mySwiper freeSwiper"
         freeMode={true}
-        modules={[Autoplay , FreeMode]}
+        modules={[Autoplay, FreeMode]}
       >
         {Array.from(Array(100).keys()).map((bg, i) => (
-          <>
-            <SwiperSlide>
+          <Fragment key={i + "digits"}>
+            <SwiperSlide key={i + "digits"}>
               <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
                 <img src="/images/bnb.svg" alt="" />
                 <Typography variant="caption">DOGE: 0.43</Typography>
               </Box>
             </SwiperSlide>
-          </>
+          </Fragment>
         ))}
       </SwiperCore>
     </Box>

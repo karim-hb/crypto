@@ -8,11 +8,10 @@ import Work from "./work";
 const Home = () => {
   return (
     <>
-     
-    {" "}   <Box sx={{ maxWidth: "1370px", mx: "auto", px: "10px" }}>
+      {" "}
+      <Box sx={{ maxWidth: "1370px", mx: "auto", px: "10px" }}>
         <Hero />
       </Box>
-      <AllDigits />
       <WhoWeAre />
       <Work />
       <Blogs />

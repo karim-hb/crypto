@@ -4,7 +4,7 @@ import Carts from "./cart";
 
 const WhoWeAre = () => {
   return (
-    <Paper sx={{py:2}}>
+    <Paper sx={{py:2 , mt:3}}>
       <Container sx={{ mt: {xs:3 , md:"100px"} , mb: "90px"}} maxWidth="xl">
         <Box
           sx={{

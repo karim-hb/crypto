@@ -1,7 +1,10 @@
-import { Routes, Route } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Route, Routes } from "react-router-dom";
 import Layout from "./layout";
+import Dashboard from "./pages/dashboard";
+import Wall from "./pages/dashboard/wall";
 import Home from "./pages/home";
+import SignUp from "./pages/sign-up";
 
 function App() {
   var dark = true;
@@ -87,6 +90,9 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/sing-up" element={<SignUp />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard/wall" element={<Wall />} />
           </Routes>
         </Layout>
       </ThemeProvider>

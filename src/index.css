@@ -3,19 +3,28 @@ html {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
+  font-family: 'Switzer', sans-serif;
+
 }
 
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
+  font-family: 'Switzer', sans-serif;
+
 }
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Switzer', sans-serif;
+
 }
 input,
 select,
 button {
   font: inherit;
+}
+a{
+  text-decoration: none;
 }
 .gh1 {
   font-size: 5.1rem;
@@ -69,6 +78,13 @@ button {
   .MuiButton-outlined {
     font-size: 14px !important;
   }
+  .freeSwiper{
+    height: 30px !important;
+  }
+  .freeSwiper .swiper-slide{
+    display: flex !important;
+    align-items: center !important;
+  }
 }
 input[type='range'] {
   overflow: hidden;
@@ -91,4 +107,37 @@ input[type='range']::-webkit-slider-thumb {
   height: 3px;
   cursor: pointer !important;  background: #31e1f7;
   box-shadow: -200px 0 0 200px #43e5f7;
+}
+.fullWidth{
+  width: 100% !important;
+}
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+  z-index: 99;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+.activeD img{
+  filter: brightness(5.5) !important;
+}
+.activeD h6{
+  color: #fff !important;
 }
