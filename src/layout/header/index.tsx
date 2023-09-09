@@ -10,7 +10,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 const Header = () => {
-  const isMd = useMediaQuery("(min-width:756px)");
+  const isMd = useMediaQuery("(min-width:960px)");
   const [openD, setOpenD] = useState(false);
   const location = useLocation();
   const [open, setOpen] = useState<any>({});

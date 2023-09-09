@@ -256,8 +256,8 @@ const SignUp = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ display: { md: "flex", xs: "none" } }}>
-          <img src="/images/login.svg" alt="" />
+        <Box sx={{ display: { md: "flex", xs: "none" }  }}>
+          <img style={{width:"100%"}}  src="/images/login.svg" alt="" />
         </Box>
       </Box>
     </Paper>

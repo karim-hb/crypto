@@ -5,7 +5,7 @@ const NewsList = () => {
     <Box
       sx={{
         display: "flex",
-        p: {md:3 , xs:2},
+        p: { md: 3, xs: 2 },
         bgcolor: "background.default",
         borderRadius: "2px",
         gap: 2,
@@ -21,10 +21,23 @@ const NewsList = () => {
           borderBottom: "1px solid #1C1B1F",
           mb: 1,
           pb: 1,
+          justifyContent: "space-between",
         }}
       >
-        <Typography variant="subtitle2">Card Title</Typography>
-        <Typography variant="caption">Subtitle here</Typography>
+        <Box
+          sx={{
+            display: "flex",
+            gap: 2,
+            alignItems: "center",
+          }}
+        >
+          <Typography variant="subtitle2">Card Title</Typography>
+          <Typography variant="caption">Subtitle here</Typography>
+        </Box>
+        <Box sx={{ display: "flex", gap: 2, alignItems: "center"  , fontSize:"14px" , fontWeight:400 , color:"#fff" , cursor:"pointer"}}>
+        Read More
+        <img src={"/images/arrowRight.svg"} alt="arrowRight.svg" />
+        </Box>
       </Box>
       <Box sx={{ display: "flex", gap: "15px" }}>
         <img width={48} height={48} src="/images/womanS.svg" alt="" />
