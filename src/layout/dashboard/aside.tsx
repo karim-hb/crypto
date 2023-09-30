@@ -1,4 +1,4 @@
-import { Collapse, Typography } from "@mui/material";
+import { Collapse, IconButton, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -7,7 +7,7 @@ const Aside = () => {
   const location = useLocation();
   const [open, setOpen] = useState<any>({});
   return (
-    <>
+    <div>
       <Box
         sx={{
           width: "250px",
@@ -28,7 +28,7 @@ const Aside = () => {
             flexDirection: "column",
           }}
         >
-          <Link  to="/dashboard">
+          <Link to="/dashboard">
             <Box
               sx={styles}
               className={location.pathname === "/dashboard" ? "activeD" : ""}
@@ -40,7 +40,7 @@ const Aside = () => {
               </Box>
             </Box>
           </Link>
-          <Link  to="/dashboard/wall">
+          <Link to="/dashboard/wall">
             <Box
               sx={styles}
               className={
@@ -134,12 +134,193 @@ const Aside = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={itemStyle}>
-          <img src="/images/helpCenter.svg" alt="" />
-          <Typography variant="subtitle1">Help Center</Typography>
-        </Box>
+        {location.pathname === "/dashboard/wall" ? (
+          <>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                px: 2,
+                py: 3,
+                bgcolor: "background.default",
+                gap: 1,
+                width: "240px",
+                mb:6
+              }}
+            >
+              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                <Typography sx={{ fontSize: "35px  !important" }} variant="h2">
+                  Chart
+                </Typography>
+                <IconButton>
+                  <img src="/images/note.svg" alt="" />
+                </IconButton>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  borderBottom: "1px solid #1C1B1F",
+                  my: 1,
+                  pb: 1,
+                }}
+              >
+                <Box sx={{ display: "flex ", gap: 1, alignItems: "top" }}>
+                  <img
+                    width={24}
+                    style={{ marginTop: "-15px" }}
+                    src="/images/bitcoinS.svg"
+                    alt=""
+                  />
+                  <Box sx={{ display: "flex", flexDirection: "column" }}>
+                    <Typography variant="body2">Bitcoin</Typography>
+                    <Typography variant="body2">22,922</Typography>
+                  </Box>
+
+                  <Typography
+                    sx={{ fontSize: "13px !important" }}
+                    variant="subtitle1"
+                  >
+                    BTC
+                  </Typography>
+                </Box>
+                <img src="/images/down.svg" width={49} alt="" />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  borderBottom: "1px solid #1C1B1F",
+                  my: 1,
+                  pb: 1,
+                }}
+              >
+                <Box sx={{ display: "flex ", gap: 1, alignItems: "top" }}>
+                  <img
+                    width={24}
+                    style={{ marginTop: "-15px" }}
+                    src="/images/etherS.svg"
+                    alt=""
+                  />
+                  <Box sx={{ display: "flex", flexDirection: "column" }}>
+                    <Typography variant="body2">Ethereum</Typography>
+                    <Typography variant="body2">22,922</Typography>
+                  </Box>
+
+                  <Typography
+                    sx={{ fontSize: "13px !important" }}
+                    variant="subtitle1"
+                  >
+                    ETH
+                  </Typography>
+                </Box>
+                <img src="/images/up.svg" width={49} alt="" />
+              </Box>{" "}
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  borderBottom: "1px solid #1C1B1F",
+                  my: 1,
+                  pb: 1,
+                }}
+              >
+                <Box sx={{ display: "flex ", gap: 1, alignItems: "top" }}>
+                  <img
+                    width={24}
+                    style={{ marginTop: "-15px" }}
+                    src="/images/tron.svg"
+                    alt=""
+                  />
+                  <Box sx={{ display: "flex", flexDirection: "column" }}>
+                    <Typography variant="body2">Tron</Typography>
+                    <Typography variant="body2">0.0679</Typography>
+                  </Box>
+
+                  <Typography
+                    sx={{ fontSize: "13px !important" }}
+                    variant="subtitle1"
+                  >
+                    TRX
+                  </Typography>
+                </Box>
+                <img src="/images/up.svg" width={49} alt="" />
+              </Box>    <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  borderBottom: "1px solid #1C1B1F",
+                  my: 1,
+                  pb: 1,
+                }}
+              >
+                <Box sx={{ display: "flex ", gap: 1, alignItems: "top" }}>
+                  <img
+                    width={24}
+                    style={{ marginTop: "-15px" }}
+                    src="/images/bitcoinS.svg"
+                    alt=""
+                  />
+                  <Box sx={{ display: "flex", flexDirection: "column" }}>
+                    <Typography variant="body2">Bitcoin</Typography>
+                    <Typography variant="body2">22,922</Typography>
+                  </Box>
+
+                  <Typography
+                    sx={{ fontSize: "13px !important" }}
+                    variant="subtitle1"
+                  >
+                    BTC
+                  </Typography>
+                </Box>
+                <img src="/images/down.svg" width={49} alt="" />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  borderBottom: "1px solid #1C1B1F",
+                  my: 1,
+                  pb: 1,
+                }}
+              >
+                <Box sx={{ display: "flex ", gap: 1, alignItems: "top" }}>
+                  <img
+                    width={24}
+                    style={{ marginTop: "-15px" }}
+                    src="/images/etherS.svg"
+                    alt=""
+                  />
+                  <Box sx={{ display: "flex", flexDirection: "column" }}>
+                    <Typography variant="body2">Ethereum</Typography>
+                    <Typography variant="body2">22,922</Typography>
+                  </Box>
+
+                  <Typography
+                    sx={{ fontSize: "13px !important" }}
+                    variant="subtitle1"
+                  >
+                    ETH
+                  </Typography>
+                </Box>
+                <img src="/images/up.svg" width={49} alt="" />
+              </Box>{" "}
+
+            </Box>
+          </>
+        ) : (
+          <Box sx={itemStyle}>
+            <img src="/images/helpCenter.svg" alt="" />
+            <Typography variant="subtitle1">Help Center</Typography>
+          </Box>
+        )}
       </Box>
-    </>
+    </div>
   );
 };
 
