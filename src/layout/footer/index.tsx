@@ -6,6 +6,32 @@ const Footer = () => {
   return (
     <Box component={"footer"} sx={{ pt: 2, pb: 6 }}>
       <Container maxWidth={"xl"}>
+        {" "}
+        <Box
+          sx={{
+            display: { lg: "none", xs: "flex" },
+            justifyContent: "center",
+            gap: 1,
+            mb:4
+          }}
+        >
+          {ALLLINKS.map((item, index) => (
+            <Link to={item.path} key={index}>
+              <Typography
+                variant="caption"
+                sx={{
+                  color: "#ccc",
+                  transition: "all 300ms",
+                  ":hover": {
+                    color: "#fff",
+                  },
+                }}
+              >
+                {item.title}
+              </Typography>
+            </Link>
+          ))}
+        </Box>
         <Box
           sx={{
             display: "flex",
@@ -22,12 +48,35 @@ const Footer = () => {
             }}
           >
             <Link to="/">
-              <img src="/images/logo.svg" alt="user_icon" />
+              <img
+                src="/images/header-menu-logo.png"
+                style={{ width: "160px" }}
+                alt="user_icon"
+              />
             </Link>
-
-            <Typography sx={{ maxWidth: { md: "60px" } }} variant="caption">
-              It’s all about the future
-            </Typography>
+          </Box>
+          <Box
+            sx={{
+              display: { lg: "grid", xs: "none" },
+              gridTemplateColumns: "1fr 1fr 1fr 1fr",
+            }}
+          >
+            {ALLLINKS.map((item, index) => (
+              <Link to={item.path} key={index}>
+                <Typography
+                  variant="subtitle2"
+                  sx={{
+                    color: "#ccc",
+                    transition: "all 300ms",
+                    ":hover": {
+                      color: "#fff",
+                    },
+                  }}
+                >
+                  {item.title}
+                </Typography>
+              </Link>
+            ))}
           </Box>
           <Box sx={{ display: "flex", gap: "10px", alignItems: "center" }}>
             <IconButton>
@@ -49,3 +98,21 @@ const Footer = () => {
 };
 
 export default Footer;
+const ALLLINKS = [
+  {
+    title: "Contact Us",
+    path: "/contact",
+  },
+  {
+    title: "Help Center",
+    path: "/help",
+  },
+  {
+    title: "Privacy Policy",
+    path: "privacy_policy",
+  },
+  {
+    title: "Terms & Conditins",
+    path: "",
+  },
+];

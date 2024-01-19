@@ -15,7 +15,7 @@ const Hero = () => {
     <Paper
       sx={{
         borderRadius: "20px",
-        px: { lg: 0, xs: 3 },
+        px: { lg: 0, xs: '4px' },
         pt: { lg: 14, xs: 3 },
         position: "relative",
         minHeight: { lg: "730px" },

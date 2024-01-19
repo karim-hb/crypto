@@ -44,40 +44,44 @@ const Carts = () => {
         <SwiperSlide>
           <Details
             image={"/images/speciemn.svg"}
-            title={"Specimen Book"}
+            title={"how  to start"}
             description={
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ."
             }
+            to="/how-to-start"
           />
         </SwiperSlide>
         <SwiperSlide>
           <Details
             image={"/images/dummy.svg"}
-            title={"Specimen Book"}
+            title={"how to use signal"}
             description={
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ."
             }
+            to="/how-to-use-signals"
           />
         </SwiperSlide>
         <SwiperSlide>
           <Details
             image={"/images/good.svg"}
-            title={"Specimen Book"}
+            title={"our trade strategy"}
             description={
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ."
             }
+            to="/trade-strategy"
           />
         </SwiperSlide>
         <SwiperSlide>
           <Details
             image={"/images/random.svg"}
-            title={"Specimen Book"}
+            title={"how to use my referral code "}
             description={
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ."
             }
+            to="/how-to-use-my-referral-code"
           />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
+        </SwiperSlide>
+        {/*         <SwiperSlide>
           <Details
             image={"/images/speciemn.svg"}
             title={"Specimen Book"}
@@ -112,7 +116,7 @@ const Carts = () => {
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum ."
             }
           />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </SwiperCore>
     </Box>
   );

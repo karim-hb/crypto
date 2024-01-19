@@ -3,27 +3,24 @@ html {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: 'Switzer', sans-serif;
-
+  font-family: "Switzer", sans-serif;
 }
 
 * {
   box-sizing: border-box;
-  font-family: 'Switzer', sans-serif;
-
+  font-family: "Switzer", sans-serif;
 }
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Switzer', sans-serif;
-
+  font-family: "Switzer", sans-serif;
 }
 input,
 select,
 button {
   font: inherit;
 }
-a{
+a {
   text-decoration: none;
 }
 .gh1 {
@@ -78,37 +75,38 @@ a{
   .MuiButton-outlined {
     font-size: 14px !important;
   }
-  .freeSwiper{
+  .freeSwiper {
     height: 30px !important;
   }
-  .freeSwiper .swiper-slide{
+  .freeSwiper .swiper-slide {
     display: flex !important;
     align-items: center !important;
   }
 }
-input[type='range'] {
+input[type="range"] {
   overflow: hidden;
- -webkit-appearance: none;
+  -webkit-appearance: none;
   background-color: #000;
   width: 100%;
   cursor: pointer !important;
 }
 
-input[type='range']::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   height: 3px;
   -webkit-appearance: none;
   color: #31e1f7;
   margin-top: -1px;
 }
 
-input[type='range']::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   width: 3px;
   -webkit-appearance: none;
   height: 3px;
-  cursor: pointer !important;  background: #31e1f7;
+  cursor: pointer !important;
+  background: #31e1f7;
   box-shadow: -200px 0 0 200px #43e5f7;
 }
-.fullWidth{
+.fullWidth {
   width: 100% !important;
 }
 .fade-enter {
@@ -135,9 +133,53 @@ input[type='range']::-webkit-slider-thumb {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
-.activeD img{
+.activeD img {
   filter: brightness(5.5) !important;
 }
-.activeD h6{
+.activeD h6 {
   color: #fff !important;
+}
+.menu_options {
+  position: absolute;
+
+  border-radius: 5px;
+  background-color: transparent;
+  top: 100%;
+  min-width: 190px;
+  display: none;
+  justify-content: center;
+  /*   box-shadow:
+ */
+  left: 0px;
+  z-index: 20000;
+}
+.menu_options:hover {
+  display: block !important;
+}
+.hoverMenu:hover .menu_options {
+  display: block !important;
+}
+.triangleL::after {
+  position: absolute;
+  top: 7px;
+  right: -11px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: solid 8px #137b80;
+  border-bottom: solid 8px transparent;
+  border-top: solid 8px transparent;
+  z-index: 0;
+}
+.triangleR::after {
+  position: absolute;
+  top: 7px;
+  left: -11px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: solid 8px #137b80;
+  border-bottom: solid 8px transparent;
+  border-top: solid 8px transparent;
+  z-index: 0;
 }

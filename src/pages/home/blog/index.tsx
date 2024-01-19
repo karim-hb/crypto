@@ -1,5 +1,6 @@
 import { Box, Button, Container, Paper, Typography } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   return (
@@ -10,7 +11,7 @@ const Blogs = () => {
           sx={{
             display: "grid",
             gap: "50px",
-            gridTemplateColumns: { md: "1fr 1fr 1fr" , xs:"1fr" },
+            gridTemplateColumns: { md: "1fr 1fr 1fr", xs: "1fr" },
           }}
         >
           <Box
@@ -231,24 +232,26 @@ const Blogs = () => {
             sx={{
               display: "flex",
               justifyContent: "center",
-              gap: {md:"20px" , xs:"20px"},
+              gap: { md: "20px", xs: "20px" },
               flexDirection: "column",
             }}
           >
-            <Typography variant="h2">Blog & Report</Typography>
-            <Typography variant="subtitle1">
+            <Typography variant="h2">Blog& News</Typography>
+            {/*    <Typography variant="subtitle1">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum .
-            </Typography>{" "}
-            <Button
-              sx={{ display: "flex", gap: 1 }}
-              variant="outlined"
-              color="inherit"
-            >
-              <span>Read More</span>
+            </Typography>{" "} */}
+            <Link to="/blog">
+              <Button
+                sx={{ display: "flex", gap: 1 , color:"#fff" }}
+                variant="outlined"
+                color="inherit"
+              >
+                <span>Read More</span>
 
-              <img src="/images/arrowW.svg" alt="" />
-            </Button>
+                <img src="/images/arrowW.svg" alt="" />
+              </Button>
+            </Link>
           </Box>
         </Box>
       </Container>

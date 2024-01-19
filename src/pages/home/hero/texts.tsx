@@ -1,5 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Texts = () => {
   return (
@@ -16,14 +17,14 @@ const Texts = () => {
         transition={{ duration: 1, delay: 0.4 }}
       >
         <Typography variant="h1" component={"h1"}>
-          It’s all about
+          Make profit
         </Typography>{" "}
         <Box sx={{ display: "flex", gap: 1 }}>
           <Typography variant="h1" component={"h1"}>
-            the
+            and
           </Typography>
           <Typography className="gh1" sx={{ color: "" }} variant="h1">
-            future
+            get rich
           </Typography>
         </Box>
       </motion.div>
@@ -33,24 +34,28 @@ const Texts = () => {
         transition={{ duration: 1, delay: 1 }}
       >
         <Typography sx={{ mt: 2, maxWidth: "390px" }} variant="subtitle1">
-          Lorem Ipsum is simply dummy text of the printing & typesetting
-          industry.
+          Enjoy surffing the cyrptocurrency wave with us .
         </Typography>
         <Box sx={{ display: "flex", gap: 2, mt: 2 }}>
-          <Button sx={{ display: "flex", gap: 1 }} variant="contained">
-            <span>Get Started</span>
+          <Link to="/sing-up">
+            <Button sx={{ display: "flex", gap: 1 }} variant="contained">
+              <span>Get Started</span>
 
-            <img src="/images/arrow.svg" alt="" />
-          </Button>
-          <Button
-            sx={{ display: "flex", gap: 1 }}
-            variant="outlined"
-            color="inherit"
-          >
-            <span>Free Signals</span>
+              <img src="/images/arrow.svg" alt="" />
+            </Button>
+          </Link>
 
-            <img src="/images/arrowW.svg" alt="" />
-          </Button>
+          <Link to="/how-to-start">
+            <Button
+              sx={{ display: "flex", gap: 1 , color:"#fff" }}
+              variant="outlined"
+              color="inherit"
+            >
+              <span>How to start</span>
+
+              <img src="/images/arrowW.svg" alt="" />
+            </Button>{" "}
+          </Link>
         </Box>{" "}
       </motion.div>
     </Box>

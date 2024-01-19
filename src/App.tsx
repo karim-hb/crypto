@@ -1,10 +1,17 @@
+import { Button } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./layout";
+import AboutUs from "./pages/aboutUs";
 import Dashboard from "./pages/dashboard";
 import Wall from "./pages/dashboard/wall";
+import Faq from "./pages/FAQ";
 import Home from "./pages/home";
+import Referall from "./pages/referral";
 import SignUp from "./pages/sign-up";
+import Signal from "./pages/signal";
+import Start from "./pages/start";
+import Strategy from "./pages/strategy";
 
 function App() {
   var dark = true;
@@ -36,7 +43,7 @@ function App() {
         letterSpacing: "2px",
         fontWeight: 700,
         fontSize: "2.6rem",
-        "@media (min-width:390px)": { fontSize: "3.1rem" },
+        "@media (min-width:390px)": { fontSize: "3.1rem" ,   fontWeight: 300, },
         "@media (min-width:768px)": { fontSize: "3.2rem" },
         "@media (min-width:992px)": { fontSize: "3.8rem" },
         "@media (min-width:1200px)": { fontSize: "5.1rem" },
@@ -90,6 +97,17 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/faq" element={<Faq />} />
+            
+            <Route path="/how-to-use-my-referral-code" element={<Referall />} />
+            <Route path="/how-to-use-signals" element={<Signal />} />
+            <Route path="/trade-strategy" element={<Strategy />} />
+
+            
+            <Route path="/how-to-start" element={<Start />} />
+
+           
             <Route path="/sing-up" element={<SignUp />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard/wall" element={<Wall />} />

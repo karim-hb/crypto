@@ -16,20 +16,12 @@ const WhoWeAre = () => {
           }}
         >
           <Box>
-            <Typography variant="h2">Who we are?</Typography>
-            <Typography sx={{mt:"2px"}} variant="subtitle1">
+            <Typography variant="h2">  how getrichx works?</Typography>
+        {/*     <Typography sx={{mt:"2px"}} variant="subtitle1">
               Lorem Ipsum is simply dummy text .
-            </Typography>
+            </Typography> */}
           </Box>
-          <Button
-            sx={{ display: "flex", gap: 1 }}
-            variant="outlined"
-            color="inherit"
-          >
-            <span>Read More</span>
-
-            <img src="/images/arrowW.svg" alt="" />
-          </Button>
+         
         </Box>
         <Carts/>
       </Container>

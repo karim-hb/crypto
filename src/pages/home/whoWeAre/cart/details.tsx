@@ -1,9 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Details: React.FC<MyComponentProps> = ({ image, title, description }) => {
+const Details: React.FC<MyComponentProps> = ({
+  image,
+  title,
+  description,
+  to,
+}) => {
   return (
-    <Box sx={{ position: "relative" , width:{md:"278px"} }}>
+    <Box sx={{ position: "relative", width: { md: "278px" } }}>
       <Box
         sx={{
           position: "absolute",
@@ -17,9 +23,17 @@ const Details: React.FC<MyComponentProps> = ({ image, title, description }) => {
       </Box>
 
       <Box
-        sx={{ py: {md:8 , xs:5}, px: {md:2 , xs:3}, bgcolor: "background.default", maxWidth: "300px" }}
+        sx={{
+          py: { mt: 8, xs: 5 },
+          px: { md: 2, xs: 3 },
+          bgcolor: "background.default",
+          maxWidth: "300px",
+        }}
       >
-        <Typography sx={{ mt: 7 }} variant="h3">
+        <Typography
+          sx={{ mt: 7, minHeight: "61px", lineHeight: "30px" }}
+          variant="h3"
+        >
           {title}
         </Typography>
         <Typography
@@ -28,6 +42,17 @@ const Details: React.FC<MyComponentProps> = ({ image, title, description }) => {
         >
           {description}
         </Typography>
+        <Link to={to}>
+          <Button
+            sx={{ display: "flex", gap: 1, mt: 3, color: "#fff" }}
+            variant="outlined"
+            color="inherit"
+          >
+            <span>Read More</span>
+
+            <img src="/images/arrowW.svg" alt="" />
+          </Button>
+        </Link>
       </Box>
     </Box>
   );
@@ -38,4 +63,5 @@ interface MyComponentProps {
   image: string;
   title: string;
   description: string;
+  to: string;
 }
