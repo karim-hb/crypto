@@ -3,7 +3,7 @@ import { Box, Container, Paper, Typography } from "@mui/material";
 const Faq = () => {
   return (
     <Box component={"article"} sx={{ minHeight: "calc(100vh - 250px)" }}>
-      <Container maxWidth="xl">
+      <Container maxWidth={"xxl" as any}>
         <Paper
           sx={{
             display: "flex",

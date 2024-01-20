@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <Box component={"footer"} sx={{ pt: 2, pb: 6 }}>
-      <Container maxWidth={"xl"}>
+      <Container maxWidth={"xxl" as any}>
         {" "}
         <Box
           sx={{
@@ -49,7 +49,7 @@ const Footer = () => {
           >
             <Link to="/">
               <img
-                src="/images/header-menu-logo.png"
+                src="/images/GetRichex Logo Site PSD.png"
                 style={{ width: "160px" }}
                 alt="user_icon"
               />
@@ -79,14 +79,14 @@ const Footer = () => {
             ))}
           </Box>
           <Box sx={{ display: "flex", gap: "10px", alignItems: "center" }}>
-            <IconButton>
+            <IconButton target={"_blank"} href=" https://t.me/getrichex/" >
               <img src="/images/telegram.svg" alt="telegram" />
             </IconButton>{" "}
-            <IconButton>
+            <IconButton target={"_blank"} href=" https://twitter.com/getrichex/">
               {" "}
               <img src="/images/twitter.svg" alt="twitter" />{" "}
             </IconButton>{" "}
-            <IconButton>
+            <IconButton target={"_blank"} href="https://www.instagram.com/getrichex/">
               {" "}
               <img src="/images/instagram.svg" alt="instagram" />{" "}
             </IconButton>

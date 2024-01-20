@@ -12,6 +12,23 @@ const Nav = () => {
       }}
     >
       {" "}
+   
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          gap: 2,
+          mr: 3,
+          pr: 3,
+          borderRight: "1px solid #4E4C4E",
+        }}
+      >
+        {MENU.map((item, index) => (
+          <Fragment key={"menu - " + index}>
+            <Items item={item} />
+          </Fragment>
+        ))}
+      </Box>
       <Box
         sx={{
           display: "flex",
@@ -23,22 +40,6 @@ const Nav = () => {
         <Link to="/sing-up">
           <Typography variant="body2">Login / Register</Typography>
         </Link>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          gap: 2,
-          ml: 3,
-          pl: 3,
-          borderLeft: "1px solid #4E4C4E",
-        }}
-      >
-        {MENU.map((item, index) => (
-          <Fragment key={"menu - " + index}>
-            <Items item={item} />
-          </Fragment>
-        ))}
       </Box>
     </Box>
   );

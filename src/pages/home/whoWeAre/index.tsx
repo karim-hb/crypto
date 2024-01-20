@@ -16,7 +16,7 @@ const WhoWeAre = () => {
           }}
         >
           <Box>
-            <Typography variant="h2">  how getrichx works?</Typography>
+            <Typography variant="h2">  how getrichx works</Typography>
         {/*     <Typography sx={{mt:"2px"}} variant="subtitle1">
               Lorem Ipsum is simply dummy text .
             </Typography> */}

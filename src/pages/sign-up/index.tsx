@@ -3,6 +3,7 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import {
   Box,
   Button,
+  Checkbox,
   IconButton,
   InputAdornment,
   Paper,
@@ -42,7 +43,7 @@ const SignUp = () => {
         <Box>
           <Typography variant="h2">{isLogin ? "Login" : "Register"}</Typography>
           <Box
-            sx={{ display: "block", position: "relative", minHeight: "441px" }}
+            sx={{ display: "block", position: "relative", minHeight: "481px" }}
           >
             <Box
               sx={{
@@ -59,7 +60,7 @@ const SignUp = () => {
               <Box
                 sx={{
                   display: "grid",
-                  gridTemplateColumns: { md: "1fr 1fr" },
+                  gridTemplateColumns: { md: "1fr " },
                   gap: "10px",
                 }}
               >
@@ -151,6 +152,38 @@ const SignUp = () => {
                 fullWidth
                 placeholder="Confirm your password"
               />
+              <TextField
+                placeholder="Got referral Code ? (Optional) "
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <img src="/images/email.svg" alt="" />
+                    </InputAdornment>
+                  ),
+                }}
+                fullWidth
+              />
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                <Checkbox />
+                <Typography
+                  sx={{
+                    a: {
+                      color: "#fff",
+                      marginInline: "4px",
+                    },
+                  }}
+                  variant="body2"
+                >
+                  I agree with
+                  <a href="/privacy-policy" target={"_blank"}>
+                    Privacy Ploicy
+                  </a>
+                  ,
+                  <a href="terms-and-conditions" target={"_blank"}>
+                    Terms and Condition
+                  </a>
+                </Typography>
+              </Box>
               <Box sx={{ display: "flex", gap: 2, mt: 2 }}>
                 <Button sx={{ display: "flex", gap: 1 }} variant="contained">
                   <span>Sumbit</span>
@@ -256,8 +289,12 @@ const SignUp = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ display: { md: "flex", xs: "none" }  }}>
-          <img style={{width:"100%"}}  src="/images/login.svg" alt="" />
+        <Box sx={{ display: { md: "flex", xs: "none" } }}>
+          <img
+            style={{ width: "100%" , objectFit:"contain"}}
+            src="/images/GetRichex Logo PNG.png"
+            alt=""
+          />
         </Box>
       </Box>
     </Paper>

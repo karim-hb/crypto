@@ -30,8 +30,6 @@ const Header = () => {
             px: { md: "30px" },
           }}
         >
-          {isMd && <Nav />}
-
           <Box
             sx={{
               display: "flex",
@@ -50,11 +48,12 @@ const Header = () => {
             <Link to="/">
               <img
                 style={{ maxWidth: isMd ? "auto" : "119px", maxHeight: "35px" }}
-                src="/images/header-menu-logo.png"
+                src="/images/GetRichex Logo Site PSD.png"
                 alt="user_icon"
               />
             </Link>
-          </Box>
+          </Box>{" "}
+          {isMd && <Nav />}
         </Box>
       </Box>
       <SwipeableDrawer
