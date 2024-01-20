@@ -19,8 +19,8 @@ const SignUp = () => {
   return (
     <Paper
       sx={{
-        maxWidth: "1370px",
-        mx: "auto",
+     
+        mx: {md:"24px"},
         px: "10px",
         height: "83vh",
         display: "flex",
@@ -168,7 +168,7 @@ const SignUp = () => {
                 <Typography
                   sx={{
                     a: {
-                      color: "#fff",
+                      color: "#31e1f7 !important",
                       marginInline: "4px",
                     },
                   }}
@@ -197,7 +197,7 @@ const SignUp = () => {
                   className="fullWidth"
                   onClick={() => setIsLogin(true)}
                 >
-                  <span>Login your account</span>
+                  <span>Login to your account</span>
 
                   <img src="/images/arrowW.svg" alt="" />
                 </Button>
@@ -272,7 +272,7 @@ const SignUp = () => {
                   className="fullWidth"
                   onClick={() => setIsLogin(false)}
                 >
-                  <span>Create New Account</span>
+                  <span>Create a New Account</span>
 
                   <img src="/images/arrowW.svg" alt="" />
                 </Button>

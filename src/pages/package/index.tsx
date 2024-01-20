@@ -32,39 +32,6 @@ const Package = () => {
               },
             }}
           >
-            <PackageLiteItem
-              src="/images/package/Package Box (Auto Trade-1Month).png"
-              src2="/images/package/Auto Trade-1Month Final.png"
-              price={110}
-              color="#d2ad48"
-              duration={" 1 Month (30 day)"}
-              off={0}
-            />
-            <PackageLiteItem
-              src="/images/package/Package Box (Auto Trade-3Month).png"
-              src2="/images/package/Auto Trade-3Month Final.png"
-              price={310}
-              color="#cf3b58"
-              duration={" 3 Month (90 day)"}
-              off={6}
-            />
-            <PackageLiteItem
-              src="/images/package/Package Box (Auto Trade-6Month).png"
-              src2="/images/package/Auto Trade-6Month Final.png"
-              price={600}
-              color="#6cb26d"
-              duration={" 6 Month (180 day)"}
-              off={9}
-            />
-            <PackageLiteItem
-              src="/images/package/Package Box (Auto Trade-1Year).png"
-              src2="/images/package/Auto Trade-1Year Final.png"
-              price={1100}
-              color="#4e5a8c"
-              duration={" 1 Year (365 day)"}
-              off={16}
-            />
-
             {/* ----- dark mode --- */}
             <PackageLiteItem
               src="/images/package/Package Box (Manual Trade-1Month).png"
@@ -95,6 +62,39 @@ const Package = () => {
               src2="/images/package/Manual Trade-1Year.png"
               price={1000}
               color="#000"
+              duration={" 1 Year (365 day)"}
+              off={16}
+            />
+
+            <PackageLiteItem
+              src="/images/package/Package Box (Auto Trade-1Month).png"
+              src2="/images/package/Auto Trade-1Month Final.png"
+              price={110}
+              color="#d2ad48"
+              duration={" 1 Month (30 day)"}
+              off={0}
+            />
+            <PackageLiteItem
+              src="/images/package/Package Box (Auto Trade-3Month).png"
+              src2="/images/package/Auto Trade-3Month Final.png"
+              price={310}
+              color="#cf3b58"
+              duration={" 3 Month (90 day)"}
+              off={6}
+            />
+            <PackageLiteItem
+              src="/images/package/Package Box (Auto Trade-6Month).png"
+              src2="/images/package/Auto Trade-6Month Final.png"
+              price={600}
+              color="#6cb26d"
+              duration={" 6 Month (180 day)"}
+              off={9}
+            />
+            <PackageLiteItem
+              src="/images/package/Package Box (Auto Trade-1Year).png"
+              src2="/images/package/Auto Trade-1Year Final.png"
+              price={1100}
+              color="#4e5a8c"
               duration={" 1 Year (365 day)"}
               off={16}
             />

@@ -29,8 +29,8 @@ const Dashboard = () => {
             justifyContent:"space-between",
           }}
         >
-          <CartSummery type={1} />
-          <CartSummery />
+          <CartSummery title='Total Referral Bonus' type={1} />
+          <CartSummery title='Withdrawble Bonus' />
         </Box>
         <Box
           sx={{
@@ -84,9 +84,9 @@ const Dashboard = () => {
             gridColumn: "span 4 / span 12",
           }}
         >
-          <CartSummery2 type={1} />
-          <CartSummery2 />
-          <CartSummery2 type={1} />
+          <CartSummery2 upcrease title="Your Profit Potential" type={1} />
+          <CartSummery2 upcrease title="January Profit Potential" />
+          <CartSummery2 title="Total Profit Potential" type={1} />
         </Box>
       </Box>
     </>

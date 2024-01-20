@@ -7,7 +7,7 @@ const Links = () => {
     <Box
       sx={{
         display: "flex",
-        p: {md:3 , xs:2},
+        p: { md: 3, xs: 2 },
         bgcolor: "background.default",
         borderRadius: "2px",
         gap: 2,
@@ -23,10 +23,14 @@ const Links = () => {
           borderBottom: "1px solid #1C1B1F",
           mb: 1,
           pb: 1,
+          justifyContent: "space-between",
         }}
       >
-        <Typography variant="subtitle2">Card Title</Typography>
-        <Typography variant="caption">Subtitle here</Typography>
+        <Typography variant="subtitle2">Referred </Typography>
+        <Box sx={{ display: "flex", gap: 1 }}>
+          <Typography variant="subtitle2">See More </Typography>
+          <img src="/images/arrowRight.svg" alt="" />
+        </Box>
       </Box>
       <Box
         sx={{
@@ -49,7 +53,7 @@ const Links = () => {
           >
             <Typography variant="caption">1</Typography>
           </Box>{" "}
-          <Typography variant="subtitle2">Link One</Typography>
+          <Typography variant="subtitle2">Thomas (11/30)</Typography>
         </Box>
         <img src="/images/arrowRight.svg" alt="" />
       </Box>
@@ -74,7 +78,7 @@ const Links = () => {
           >
             <Typography variant="caption">2</Typography>
           </Box>{" "}
-          <Typography variant="subtitle2">Link Two</Typography>
+          <Typography variant="subtitle2">Oliver (50/365)</Typography>
         </Box>
         <img src="/images/arrowRight.svg" alt="" />
       </Box>
@@ -99,20 +103,11 @@ const Links = () => {
           >
             <Typography variant="caption">3</Typography>
           </Box>{" "}
-          <Typography variant="subtitle2">Link Three </Typography>
+          <Typography variant="subtitle2">Edward (180/180) </Typography>
         </Box>
         <img src="/images/arrowRight.svg" alt="" />
       </Box>
-      <Button
-        sx={{ display: "flex", gap: 1 , mt:"2px" }}
-        variant="outlined"
-        color="inherit"
-        className="fullWidth"
-      >
-        <span>See More</span>
-
-        <img src="/images/arrowW.svg" alt="" />
-      </Button>
+   
     </Box>
   );
 };

@@ -5,9 +5,9 @@ import Point from "./point";
 
 const Start = () => {
   return (
-    <Box component={"article"} sx={{ minHeight: "calc(100vh - 250px)" }}>
+    <Paper component={"article"} sx={{ minHeight: "calc(100vh - 250px)"  ,mx:{md:"24px"}}}>
       <Container maxWidth={"xxl" as any}>
-        <Paper
+        <Box
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -69,9 +69,9 @@ const Start = () => {
 "
             />
           </Box>
-        </Paper>
+        </Box>
       </Container>
-    </Box>
+    </Paper>
   );
 };
 

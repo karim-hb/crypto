@@ -105,7 +105,7 @@ const MobileNav = ({ setOpenD }: any) => {
                   <Box sx={itemStyle}>
                     {" "}
                     <img src="/images/wall.svg" alt="" />
-                    <Typography variant="subtitle1">Wall</Typography>
+                    <Typography variant="subtitle1">Signal</Typography>
                   </Box>
                 </Box>{" "}
               </Link>

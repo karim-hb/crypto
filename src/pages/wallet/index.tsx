@@ -1,4 +1,4 @@
-import { Box, Button, Container, Paper, Typography } from "@mui/material";
+import { Box, Button, Container, Pagination, Paper, Typography } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -9,7 +9,7 @@ import Account from "./account";
 import Carts from "./carts";
 const Wallet = () => {
   return (
-    <Paper sx={{ minHeight: "calc(100vh - 180px)", pt: 6, pb: 4 }}>
+    <Paper sx={{ minHeight: "calc(100vh - 180px)", pt: 6, pb: 4 ,mx:{md:"24px"}}}>
       <Container maxWidth={"xxl" as any}>
         <Box
           sx={{
@@ -129,22 +129,9 @@ const Wallet = () => {
               </Table>
             </TableContainer>
           </Box>
-          <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 3 }}>
+          <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
             {" "}
-            <Button
-              sx={{
-                display: "flex",
-                gap: 1,
-                color: "#fff",
-                height: "30px !important",
-                fontSize: "13px !important",
-                width: "120px !important",
-              }}
-              variant="outlined"
-              color="inherit"
-            >
-              <span>See More </span>
-            </Button>{" "}
+            <Pagination count={4} />
           </Box>
         </Box>
       </Container>

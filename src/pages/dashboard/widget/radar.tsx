@@ -1,16 +1,8 @@
 import { Box, Typography } from "@mui/material";
-import {
-  Chart as ChartJS,
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
-  Tooltip,
-  Legend,
-} from "chart.js";
-import { Radar } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
 
-ChartJS.register(
+ChartJS.register(ArcElement, Tooltip, Legend); /* ChartJS.register(
   RadialLinearScale,
   PointElement,
   LineElement,
@@ -18,8 +10,8 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-export const data = {
+ */
+/* export const data = {
   labels: ["E 1", "E 2", "E 3", "E 4", "E 5"],
   datasets: [
     {
@@ -69,7 +61,8 @@ export const options = {
       text: "Chart.js Line Chart",
     },
   },
-};
+}; */
+
 const RadarChart = () => {
   return (
     <Box
@@ -93,12 +86,40 @@ const RadarChart = () => {
           pb: 1,
         }}
       >
-        <Typography variant="subtitle2">Card Title</Typography>
-        <Typography variant="caption">Subtitle here</Typography>
+        <Typography variant="subtitle2">Package Status </Typography>
+        {/*         <Typography variant="caption">Subtitle here</Typography>
+         */}{" "}
       </Box>
-      <Radar data={data} options={options} />
+      {/*       <Radar data={data} options={options} />
+
+
+ */}{" "}
+      <Box sx={{ display: "flex", position: "relative" }}>
+        {" "}
+        <Doughnut data={data} options={options} />
+        <Box sx={{position:"absolute" , right:"50%" , top:"50%" , transform:"translate(50%,-50%)" , display:"flex" , flexDirection:"column" , justifyContent:"center" , alignItems:"center"}}>
+          <Box sx={{color:"#2fbfb2" , fontSize:"35px"}}>127/365</Box>
+          <Box sx={{color:"#2fbfb2" , fontSize:"15px"}}>Auto Trade</Box>
+
+        </Box>
+      </Box>
     </Box>
   );
 };
-
+var options = {
+  cutoutPercentage: 20,
+  cutout: 135,
+};
 export default RadarChart;
+export const data = {
+  labels: [],
+  datasets: [
+    {
+      label: "",
+      data: [365, 127],
+      backgroundColor: ["#2fbfb2", "#1C1B1F"],
+      borderColor: ["#2fbfb2", "#1C1B1F"],
+      borderWidth: 0,
+    },
+  ],
+};

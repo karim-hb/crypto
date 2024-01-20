@@ -90,8 +90,7 @@ const AreaChart = () => {
       }}
     >
       <Box sx={{ display: "flex", gap: 2, alignItems: "center" , borderBottom:"1px solid #1C1B1F" , mb:1,pb:1 }}>
-        <Typography variant="subtitle2">Card Title</Typography>
-        <Typography variant="caption">Subtitle here</Typography>
+        <Typography variant="subtitle2">Trading Statement Chart</Typography>
       </Box>
       <Line options={options} data={data} width={300} />
     </Box>

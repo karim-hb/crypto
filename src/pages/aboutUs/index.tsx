@@ -3,9 +3,9 @@ import { Box } from "@mui/material";
 
 const AboutUs = () => {
   return (
-    <Box component={"article"} sx={{ minHeight: "calc(100vh - 250px)" }}>
+    <Paper component={"article"} sx={{ minHeight: "calc(100vh - 250px)" , mx:{md:"24px"} }}>
       <Container maxWidth={"xxl" as any}>
-        <Paper
+        <Box
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -29,9 +29,9 @@ const AboutUs = () => {
             follow the signal instructions step by step. Make profit and GET
             RICH!
           </Typography>
-        </Paper>
+        </Box>
       </Container>
-    </Box>
+    </Paper>
   );
 };
 

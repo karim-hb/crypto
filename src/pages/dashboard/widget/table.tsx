@@ -6,6 +6,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { Box } from "@mui/system";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 const TableWidget = () => {
   return (
     <Box
@@ -29,17 +31,16 @@ const TableWidget = () => {
           pb: 1,
         }}
       >
-        <Typography variant="subtitle2">Card Title</Typography>
-        <Typography variant="caption">Subtitle here</Typography>
+        <Typography variant="subtitle2">Signals </Typography>
       </Box>
-      <Box sx={{ width: '100%', overflow: 'hidden' }}>
+      <Box sx={{ width: "100%", overflow: "hidden" }}>
         <TableContainer
           sx={{
             ".MuiTableCell-root": {
               padding: "10px 4px !important",
             },
-        
-          /*   overflowX: "auto",
+
+            /*   overflowX: "auto",
             maxWidth: "fit-content", */
           }}
         >
@@ -53,12 +54,23 @@ const TableWidget = () => {
                   },
                 }}
               >
-                <TableCell>#</TableCell>
-                <TableCell align="left">Title 1</TableCell>
-                <TableCell align="left">Title 2</TableCell>
-                <TableCell align="left">Title 3</TableCell>
-                <TableCell align="left">Title 4</TableCell>
-                <TableCell align="left">Title 5</TableCell>
+                <TableCell sx={{ paddingLeft: "0px !important" }} align="left">
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      svg: { cursor: "pointer" },
+                    }}
+                  >
+                    <ArrowDropUpIcon sx={{ mb: "-15px", color: "#4CAF50" }} />
+                    <ArrowDropDownIcon sx={{ color: "#E53935" }} />
+                  </Box>
+                </TableCell>
+                <TableCell align="left">Coin</TableCell>
+                <TableCell align="left">Status </TableCell>
+                <TableCell align="left">Positions</TableCell>
+                <TableCell align="left">Price (USDT)</TableCell>
+                <TableCell align="left">Profit</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -68,7 +80,11 @@ const TableWidget = () => {
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
                   <TableCell component="th" scope="row">
-                    {index}
+                    {row.profit > 0 ? (
+                      <ArrowDropUpIcon sx={{ color: "#4CAF50" }} />
+                    ) : (
+                      <ArrowDropDownIcon sx={{ color: "#E53935" }} />
+                    )}
                   </TableCell>
                   <TableCell>
                     <Box
@@ -112,7 +128,12 @@ const TableWidget = () => {
                       {row.price}
                     </Box>
                   </TableCell>
-                  <TableCell align="left">{row.value}</TableCell>
+                  <TableCell
+                    sx={{ color: row?.profit > 0 ? "#4CAF50" : "#E53935" }}
+                    align="left"
+                  >
+                  {row?.profit > 0 ?'+ % ' : '- % '}  {row.profit} {" "}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -130,43 +151,56 @@ function createData(
   code: string,
   value: string,
   price: string,
-  raise: boolean
+  raise: boolean,
+  profit: number
 ) {
-  return { name, image, code, value, price, raise };
+  return { name, image, code, value, price, raise, profit };
 }
 
 const rows = [
   createData(
     "Bitcoin",
     "/images/bitcoinS.svg",
-    "BTC",
-    "value 1",
+    "Active",
+    "23,005",
     "$417,956,321",
-    true
+    true,
+    1.2
   ),
   createData(
     "Ethereum",
     "/images/etherS.svg",
-    "ETH",
-    "value 2",
+    "Waiting",
+    "23,005",
     "$187,721,091",
-    true
+    true,
+    1.2
   ),
   createData(
     "Binance",
     "/images/bitcoinS.svg",
-    "BNB",
-    "value 3",
+    "Archived",
+    "23,005",
     "$71,734,000",
-    false
+    false,
+    1.2
   ),
-  createData("XRP", "/images/xrpS.svg", "XRP", "value 4", "$45,534,545", false),
+  createData(
+    "XRP",
+    "/images/xrpS.svg",
+    "Expired",
+    "23,005",
+    "$45,534,545",
+    false,
+    -0.73
+  ),
   createData(
     "Cardano",
     "/images/etherS.svg",
-    "ADA",
-    "value 5",
+    "Expired",
+    "23,005",
     "$43,412,668",
-    true
+    true,
+    -0.73
   ),
 ];

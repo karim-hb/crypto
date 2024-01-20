@@ -14,7 +14,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 const Transaction = () => {
   return (
-    <Paper sx={{ minHeight: "calc(100vh - 180px)", pt: 6 }}>
+    <Paper sx={{ minHeight: "calc(100vh - 180px)", pt: 6, mx:{md:"24px"} }}>
       <Container maxWidth={"xxl" as any}>
         <Box
           sx={{

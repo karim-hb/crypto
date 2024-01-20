@@ -8,8 +8,8 @@ const DashBoardLayout: React.FC<MyComponentProps> = ({ children }) => {
   const isLg = useMediaQuery("(min-width:960px)");
 
   return (
-    <>
-      <Paper
+    <Paper sx={{mx:{md:"24px"}}}>
+      <Box
         sx={{
           maxWidth: "1370px",
           mx: "auto",
@@ -31,8 +31,8 @@ const DashBoardLayout: React.FC<MyComponentProps> = ({ children }) => {
           <></>
         )}
         <Box sx={{ overflowX: "hidden" }}>{children}</Box>
-      </Paper>
-    </>
+      </Box>
+    </Paper>
   );
 };
 

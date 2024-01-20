@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       {" "}
-      <Box sx={{ maxWidth: "1370px", mx: "auto", px: "10px" }}>
+      <Box sx={{  mx: "auto", px:{md:"24px" , xs: "10px"} }}>
         <Hero />
       </Box>
       <WhoWeAre />

@@ -30,9 +30,8 @@ const NewsList = () => {
             gap: 2,
             alignItems: "center",
           }}
-        >
-          <Typography variant="subtitle2">Card Title</Typography>
-          <Typography variant="caption">Subtitle here</Typography>
+        > 
+          <Typography variant="subtitle2">Blogs and  News</Typography>
         </Box>
         <Box sx={{ display: "flex", gap: 2, alignItems: "center"  , fontSize:"14px" , fontWeight:400 , color:"#fff" , cursor:"pointer"}}>
         Read More

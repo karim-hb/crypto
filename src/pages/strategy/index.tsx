@@ -2,9 +2,9 @@ import { Box, Container, Paper, Typography } from "@mui/material";
 
 const Strategy = () => {
   return (
-    <Box component={"article"} sx={{ minHeight: "calc(100vh - 250px)" }}>
+    <Paper component={"article"} sx={{ minHeight: "calc(100vh - 250px)" ,mx:{md:"24px"}}}>
       <Container maxWidth={"xxl" as any}>
-        <Paper
+        <Box
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -57,9 +57,9 @@ But if the signal is multi-target, proceed as follows:
             >In the third part, we use from “trailing stop method”. In this method, the stop loss point changes depending on the target point. In this way, the stop loss point is always two steps before the target point that is touched. For example, if the second target is touched, the stop loss point will move to the entry point. See the table below for more details:
             </Typography>
           </Box>
-        </Paper>
+        </Box>
       </Container>
-    </Box>
+    </Paper>
   );
 };
 

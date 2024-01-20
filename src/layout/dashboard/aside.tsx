@@ -50,7 +50,7 @@ const Aside = () => {
               <Box sx={itemStyle}>
                 {" "}
                 <img src="/images/wall.svg" alt="" />
-                <Typography variant="subtitle1">Wall</Typography>
+                <Typography variant="subtitle1">Signal</Typography>
               </Box>
             </Box>{" "}
           </Link>
@@ -133,8 +133,11 @@ const Aside = () => {
               </Box>
             </Box>
           </Box>
-        </Box>
-        {location.pathname === "/dashboard/wall" ? (
+        </Box> <Box sx={itemStyle}>
+            <img src="/images/helpCenter.svg" alt="" />
+            <Typography variant="subtitle1">Help Center</Typography>
+          </Box>
+      {/*   {location.pathname === "/dashboard/wall" ? (
           <>
             <Box
               sx={{
@@ -318,7 +321,7 @@ const Aside = () => {
             <img src="/images/helpCenter.svg" alt="" />
             <Typography variant="subtitle1">Help Center</Typography>
           </Box>
-        )}
+        )} */}
       </Box>
     </div>
   );

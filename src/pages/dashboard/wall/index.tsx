@@ -27,7 +27,7 @@ const Wall = () => {
           gap: 2,
         }}
       >
-        <Typography variant="h2">Wall</Typography>
+        <Typography variant="h2">SIGNAL</Typography>
         <Box
           sx={{
             display: "flex",

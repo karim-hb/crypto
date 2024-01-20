@@ -2,9 +2,9 @@ import { Box, Container, Paper, Typography } from "@mui/material";
 
 const Signal = () => {
   return (
-    <Box component={"article"} sx={{ minHeight: "calc(100vh - 250px)" }}>
+    <Paper component={"article"} sx={{ minHeight: "calc(100vh - 250px)"  ,mx:{md:"24px"}}}>
       <Container maxWidth={"xxl" as any}>
-        <Paper
+        <Box
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -77,9 +77,9 @@ const Signal = () => {
               Make profit and GET RICH!
             </Typography>
           </Box>
-        </Paper>
+        </Box>
       </Container>
-    </Box>
+    </Paper>
   );
 };
 

@@ -1,13 +1,16 @@
-import { Button, Typography } from "@mui/material";
-import { Box } from "@mui/system";
-import React from "react";
-
+import { Box, Typography } from "@mui/material";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
 const BlogWidget = () => {
   return (
     <Box
       sx={{
         display: "flex",
-        p: {md:3 , xs:2},
+        p: { md: 3, xs: 2 },
         bgcolor: "background.default",
         borderRadius: "2px",
         gap: 2,
@@ -21,108 +24,84 @@ const BlogWidget = () => {
           gap: 2,
           alignItems: "center",
           borderBottom: "1px solid #1C1B1F",
-          mb:3,
+          mb: 1,
           pb: 1,
-        }}
-      >
-        <Typography variant="subtitle2">Card Title</Typography>
-        <Typography variant="caption">Subtitle here</Typography>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
           justifyContent: "space-between",
-          height: "100%",
         }}
       >
-        <Box
-          sx={{ display: "grid", gridTemplateColumns:{md: "1fr 1fr"}, gap: "10px" }}
-        >
-          <Box sx={{ display: "flex", gap: "15px" }}>
-            <img
-              width={48}
-              height={48}
-              style={{ flex: "none" , objectFit:"contain" }}
-              src="/images/womanS.svg"
-              alt=""
-            />
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "10px",
-                justifyContent: "space-between",
-                pb: 2,
-              }}
-            >
-              <Typography
-                sx={{ color: "#fff !important" }}
-                variant="subtitle1"
-                className="ellipsis-2"
-              >
-                Bankman-Fried met with white house aides on crypto policy before
-                FTX Collapse
-              </Typography>
-              <Typography variant="subtitle1" className="ellipsis-3">
-                Then FTX, among the highest profile crypto exchanges in the
-                world, melted down in November as accusations of misappropriated
-                customer funds began to fly. Last week, a federal judge in New
-                York ordered FTX founder Sam Bankman-Fried released on $250
-                million bond. He'll be under house arrest at his parents' home
-                in Palo Alto, Calif., while he awaits trial.
-              </Typography>{" "}
-            </Box>
-          </Box>
-          <Box sx={{ display: "flex", gap: "15px" }}>
-            <img
-              width={48}
-              height={48}
-              style={{ flex: "none" , objectFit:"contain" }}
-              src="/images/manS.svg"
-              alt=""
-            />
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "10px",
-                justifyContent: "space-between",
-                pb: 2,
-              }}
-            >
-              <Typography
-                sx={{ color: "#fff !important" }}
-                variant="subtitle1"
-                className="ellipsis-2"
-              >
-                Bankman-Fried met with white house aides on crypto policy before
-                FTX Collapse
-              </Typography>
-              <Typography variant="subtitle1" className="ellipsis-3">
-                Then FTX, among the highest profile crypto exchanges in the
-                world, melted down in November as accusations of misappropriated
-                customer funds began to fly. Last week, a federal judge in New
-                York ordered FTX founder Sam Bankman-Fried released on $250
-                million bond. He'll be under house arrest at his parents' home
-                in Palo Alto, Calif., while he awaits trial.
-              </Typography>{" "}
-            </Box>
-          </Box>
+        <Typography variant="subtitle2">Notification </Typography>{" "}
+        <Box sx={{ display: "flex", gap: 1 }}>
+          <Typography variant="subtitle2">See More </Typography>
+          <img src="/images/arrowRight.svg" alt="" />
         </Box>
-        <Button
-          sx={{ display: "flex", gap: 1 }}
-          variant="outlined"
-          color="inherit"
-          className="fullWidth"
-        >
-          <span>See More </span>
+      </Box>
+      <Box sx={{ width: "100%", overflow: "hidden" }}>
+        <TableContainer
+          sx={{
+            ".MuiTableCell-root": {
+              padding: "10px 4px !important",
+            },
 
-          <img src="/images/arrowW.svg" alt="" />
-        </Button>
+            /*   overflowX: "auto",
+            maxWidth: "fit-content", */
+          }}
+        >
+          <Table aria-label="simple table" sx={{ minWidth: "450px" }}>
+            <TableHead>
+              <TableRow
+                sx={{
+                  th: {
+                    color: "#605D62 !important",
+                    fontSize: "13px !important",
+                  },
+                }}
+              >
+                <TableCell align="left">#</TableCell>
+                <TableCell align="left">Time </TableCell>
+                <TableCell align="left">Title</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row, index) => (
+                <TableRow
+                  key={row.title}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {index}
+                  </TableCell>{" "}
+                  <TableCell align="left">{row.Date}</TableCell>
+                  <TableCell align="left">{row.title}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
       </Box>
     </Box>
   );
 };
 
 export default BlogWidget;
+const rows = [
+  {
+    title: "Notification Title",
+    Date: "2024-01-12 11:37:10",
+  },
+  {
+    title: "Notification Title",
+    Date: "2024-01-12 11:37:10",
+  },
+  {
+    title: "Notification Title",
+    Date: "2024-01-12 11:37:10",
+  },
+  {
+    title: "Notification Title",
+    Date: "2024-01-12 11:37:10",
+  },
+  {
+    title: "Notification Title",
+    Date: "2024-01-12 11:37:10",
+  },
+];
