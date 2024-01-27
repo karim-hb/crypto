@@ -2,7 +2,7 @@ import { Box, Collapse, Container, Paper, Typography } from "@mui/material";
 import { useState } from "react";
 
 const Faq = () => {
-  const [open, setOpen] = useState({ 1: true, 2: false, 3: false });
+  const [open, setOpen] = useState({ 1: false, 2: false, 3: false });
   return (
     <Paper
       component={"article"}
@@ -15,12 +15,13 @@ const Faq = () => {
             flexDirection: "column",
             gap: 2,
             px: 3,
-            py: 1,
+            pt: 6,
+            pb:20
           }}
         >
-          <Typography variant="h1">FAQ </Typography>
+          <Typography variant="h1" className="custome_h1">FAQ </Typography>
           <Typography variant="h3">Frequently Asked Questions</Typography>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 , background:"#414141" , p:2 , borderRadius:"2px" , maxWidth:"500px" , mt:2 }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap:open[1] ?  2 : 0 , background:"#414141" , p:2 , borderRadius:"2px" , maxWidth:"500px" , mt:2 }}>
             <Box
               sx={{
                 display: "flex",
@@ -53,7 +54,7 @@ const Faq = () => {
               </Typography>
             </Collapse>
           </Box>{" "}
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 , background:"#414141" , p:2 , borderRadius:"2px" , maxWidth:"500px" }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap:open[2] ?  2 : 0 , background:"#414141" , p:2 , borderRadius:"2px" , maxWidth:"500px" }}>
             <Box
               sx={{
                 display: "flex",
@@ -99,7 +100,7 @@ const Faq = () => {
               </>
             </Collapse>
           </Box>{" "}
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 , background:"#414141" , p:2 , borderRadius:"2px" , maxWidth:"500px" }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap:open[3] ?  2 : 0 , background:"#414141" , p:2 , borderRadius:"2px" , maxWidth:"500px" }}>
             <Box
               sx={{
                 display: "flex",

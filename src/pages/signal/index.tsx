@@ -10,11 +10,11 @@ const Signal = () => {
             flexDirection: "column",
             gap: 4,
             px: 3,
-            py: 1,
-            mt: { md: 5 },
-          }}
+            py: 6,
+/*             mt: { md: 5 },
+ */          }}
         >
-          <Typography variant="h3">How to use signals</Typography>
+          <Typography className="custome_h1" variant="h1">How to use signals</Typography>
           <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
             <Typography sx={{ lineHeight: "30px" }} variant="body2">
               Each signal contains the following information:

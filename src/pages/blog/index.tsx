@@ -30,7 +30,7 @@ const Blogs = () => {
           flexDirection: "column",
           gap: 2,
           px: 3,
-          py: 1,
+          py: 6,
         }}
       >
         <Box
@@ -44,7 +44,7 @@ const Blogs = () => {
           }}
         >
           {" "}
-          <Typography variant="h5">Blogs </Typography>{" "}
+          <Typography className="custome_h1" variant="h1">Blogs </Typography>{" "}
           <Box
             sx={{
               display: "flex",

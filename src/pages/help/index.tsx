@@ -33,7 +33,7 @@ const Help = () => {
             width: "100%",
           }}
         >
-          <Typography variant="h3">What can we help you with ?</Typography>
+          <Typography className="custome_h1"  variant="h1">What can we help you with ?</Typography>
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <TextField
               sx={{ background: "#414141", width: { sm: "400px", xs: "100%" } }}

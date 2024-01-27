@@ -11,11 +11,11 @@ const AboutUs = () => {
             flexDirection: "column",
             gap: 4,
             px: 3,
-            py: 1,
-            mt: { md: 5 },
+            py: 6,
+   /*          mt: { md: 5 }, */
           }}
         >
-          <Typography variant="h1">About us</Typography>
+          <Typography className="custome_h1" variant="h1">About us</Typography>
           <Typography variant="h3">Why should we use GETRICHEX?</Typography>
 
           <Typography sx={{ lineHeight: "30px" }} variant="body2">

@@ -13,11 +13,11 @@ const Start = () => {
             flexDirection: "column",
             gap: 4,
             px: 3,
-            py: 1,
-            mt: { md: 5 },
-          }}
+            py: 6,
+/*             mt: { md: 5 },
+ */          }}
         >
-          <Typography variant="h3">How To Start?</Typography>
+          <Typography className="custome_h1" variant="h1">How To Start?</Typography>
           <Box sx={{ position: "relative", minHeight: "800px" }}>
             <Line />
             <Point index={0} />

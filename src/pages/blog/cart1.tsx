@@ -17,7 +17,7 @@ const Cart1 = ({ item }: any) => {
     <Card sx={{ display: "flex", boxShadow: "none !important" }}>
       <CardMedia
         component="img"
-        sx={{ width: {md:151 , xs:90}, borderRadius: "10px" }}
+        sx={{ width: {md:190 , xs:90}, borderRadius: "10px" }}
         image={item.img}
         alt="Live from space album cover"
       />
