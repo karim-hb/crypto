@@ -2,7 +2,7 @@ import { Box, Container, Paper, Typography } from "@mui/material";
 
 const Referall = () => {
   return (
-    <Paper component={"article"} sx={{ minHeight: "calc(100vh - 250px)" ,mx:{md:"24px"} }}>
+    <Paper component={"article"} sx={{ minHeight: "calc(100vh - 180px)",py:{md:"14px"}}}>
       <Container maxWidth={"xxl" as any}>
         <Box
           sx={{
@@ -10,7 +10,7 @@ const Referall = () => {
             flexDirection: "column",
             gap: 4,
             px: 3,
-            py: 2,
+            py: 1,
             mt: { md: 5 },
           }}
         >

@@ -4,24 +4,23 @@ import { useState } from "react";
 const Faq = () => {
   const [open, setOpen] = useState({ 1: true, 2: false, 3: false });
   return (
-    <Box
+    <Paper
       component={"article"}
-      sx={{ minHeight: "calc(100vh - 250px)", mx: { md: "24px" } }}
+      sx={{ minHeight: "calc(100vh - 190px)" }}
     >
-      <Box maxWidth={"xxl" as any}>
-        <Paper
+        <Container
+        maxWidth={'xxl' as any}
           sx={{
             display: "flex",
             flexDirection: "column",
-            gap: 4,
+            gap: 2,
             px: 3,
-            py: 2,
-            mt: { md: 5 },
+            py: 1,
           }}
         >
           <Typography variant="h1">FAQ </Typography>
           <Typography variant="h3">Frequently Asked Questions</Typography>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 , background:"#414141" , p:2 , borderRadius:"2px" , maxWidth:"500px" , mt:2 }}>
             <Box
               sx={{
                 display: "flex",
@@ -54,7 +53,7 @@ const Faq = () => {
               </Typography>
             </Collapse>
           </Box>{" "}
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 , background:"#414141" , p:2 , borderRadius:"2px" , maxWidth:"500px" }}>
             <Box
               sx={{
                 display: "flex",
@@ -100,7 +99,7 @@ const Faq = () => {
               </>
             </Collapse>
           </Box>{" "}
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 , background:"#414141" , p:2 , borderRadius:"2px" , maxWidth:"500px" }}>
             <Box
               sx={{
                 display: "flex",
@@ -141,9 +140,9 @@ const Faq = () => {
               </>
             </Collapse>
           </Box>
-        </Paper>
-      </Box>
-    </Box>
+        </Container>
+  
+    </Paper>
   );
 };
 

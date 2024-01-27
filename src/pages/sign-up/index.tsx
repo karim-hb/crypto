@@ -20,7 +20,7 @@ const SignUp = () => {
     <Paper
       sx={{
      
-        mx: {md:"24px"},
+      
         px: "10px",
         height: "83vh",
         display: "flex",

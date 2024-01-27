@@ -3,7 +3,7 @@ import PackageLiteItem from "./items";
 
 const Package = () => {
   return (
-    <Box sx={{ minHeight: "calc(100vh - 250px)" }}>
+    <Box sx={{ minHeight: "calc(100vh - 190px)" }}>
       <Container maxWidth="xl">
         <Paper
           sx={{

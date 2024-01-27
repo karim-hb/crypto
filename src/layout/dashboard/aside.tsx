@@ -57,12 +57,15 @@ const Aside = () => {
 
           <Box
             sx={styles}
-            className={
-              location.pathname === "/dashboard/wallet" ? "activeD" : ""
-            }
-            onClick={() => setOpen({ wallet: !open.wallet })}
+         
           >
-            <Box sx={itemStyle}>
+            <Box
+              onClick={() => setOpen({ wallet: !open.wallet })}
+              sx={itemStyle}
+              className={
+                location.pathname === "/dashboard/withraw" || location.pathname === "/dashboard/transactions"  ? "activeD" : ""
+              }
+            >
               {" "}
               <img src="/images/wallet.svg" alt="" />
               <Typography variant="subtitle1">Wallet</Typography>{" "}
@@ -84,7 +87,7 @@ const Aside = () => {
                 />
               </Box>
             </Box>{" "}
-            <Collapse in={open.wallet}>
+            <Collapse in={open.wallet || location.pathname === "/dashboard/withraw" || location.pathname === "/dashboard/transactions" }>
               <Box
                 sx={{
                   display: "flex",
@@ -94,10 +97,26 @@ const Aside = () => {
                   pl: 4,
                 }}
               >
-                <Link to="/dashboard/wallet/transaction">
-                  <Box sx={itemStyle}>
+                <Link to="/dashboard/transactions">
+                  <Box
+                    className={
+                      location.pathname === "/dashboard/transactions" ? "activeD" : ""
+                    }
+                    sx={itemStyle}
+                  >
                     <Typography variant="subtitle1">-</Typography>
                     <Typography variant="subtitle1">transactions</Typography>
+                  </Box>
+                </Link>{" "}
+                <Link to="/dashboard/withraw">
+                  <Box
+                    className={
+                      location.pathname === "/dashboard/withraw" ? "activeD" : ""
+                    }
+                    sx={itemStyle}
+                  >
+                    <Typography variant="subtitle1">-</Typography>
+                    <Typography variant="subtitle1">withraw</Typography>
                   </Box>
                 </Link>
               </Box>
@@ -133,11 +152,12 @@ const Aside = () => {
               </Box>
             </Box>
           </Box>
-        </Box> <Box sx={itemStyle}>
+        </Box>{" "}
+        {/* <Box sx={itemStyle}>
             <img src="/images/helpCenter.svg" alt="" />
             <Typography variant="subtitle1">Help Center</Typography>
-          </Box>
-      {/*   {location.pathname === "/dashboard/wall" ? (
+          </Box> */}
+        {/*   {location.pathname === "/dashboard/wall" ? (
           <>
             <Box
               sx={{

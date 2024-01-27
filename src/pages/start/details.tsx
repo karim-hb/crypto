@@ -10,7 +10,7 @@ const Details = ({ index, text }: any) => {
           style={{
             width: "50px",
             height: "30px",
-            background: "#137b80",
+            background: "#414141",
             borderRadius: "5px",
             position: "absolute",
             top: `calc(${index * 100}px - 10px)`,
@@ -33,7 +33,7 @@ const Details = ({ index, text }: any) => {
       <motion.div
         style={{
           /* height: "30px", */
-          background: "#137b80",
+          background: "#000",
           borderRadius: "5px",
           position: "absolute",
           top: `calc(${index * 100}px - 10px)`,

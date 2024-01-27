@@ -133,7 +133,7 @@ const Wall = () => {
           </Box>
         </TabPanel>
       </SwipeableViews>
-      {location.pathname === "/dashboard/wall" && !isMd ? (
+    {/*   {location.pathname === "/dashboard/wall" && !isMd ? (
         <>
           <Box
             sx={{
@@ -314,7 +314,7 @@ const Wall = () => {
         </>
       ) : (
         <></>
-      )}
+      )} */}
     </Container>
   );
 };

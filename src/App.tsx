@@ -3,9 +3,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./layout";
 import AboutUs from "./pages/aboutUs";
+import Blogs from "./pages/blog";
+import Contact from "./pages/contact";
 import Dashboard from "./pages/dashboard";
 import Wall from "./pages/dashboard/wall";
 import Faq from "./pages/FAQ";
+import Help from "./pages/help";
 import Home from "./pages/home";
 import Package from "./pages/package";
 import Referall from "./pages/referral";
@@ -83,6 +86,12 @@ function App() {
         fontSize: "14px",
         lineHeight: "1.1",
       },
+      h5:{
+        fontSize: "16px",
+        "@media (min-width:768px)": { fontSize: "20px" },
+        "@media (min-width:992px)": { fontSize: "22px" },
+        "@media (min-width:1200px)": { fontSize: "24px" },
+      }
     },
     containers: {
       maxWidth: "xxl",
@@ -108,15 +117,19 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/faq" element={<Faq />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/blog" element={<Blogs />} />
+            <Route path="/contact" element={<Contact />} />
 
+            
             <Route path="/how-to-use-my-referral-code" element={<Referall />} />
             <Route path="/how-to-use-signals" element={<Signal />} />
             <Route path="/trade-strategy" element={<Strategy />} />
 
             <Route path="/how-to-start" element={<Start />} />
             <Route path="/packages" element={<Package />} />
-            <Route path="/transactions" element={<Transaction />} />
-            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/dashboard/transactions" element={<Transaction />} />
+            <Route path="/dashboard/withraw" element={<Wallet />} />
 
             <Route path="/sing-up" element={<SignUp />} />
             <Route path="/dashboard" element={<Dashboard />} />
