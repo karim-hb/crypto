@@ -7,11 +7,13 @@ const CartSummery2 = ({ type , title  , upcrease}: any) => {
     <Box
       sx={{
         display: "flex",
-        p: {md:3 , xs:2},
+        px: {md:3 , xs:2},
         bgcolor: "background.default",
         borderRadius: "2px",
         gap: 2,
-        justifyContent:"space-between"
+        justifyContent:"space-between",
+        py: {md:4 , xs:2},
+
       }}
     >
    

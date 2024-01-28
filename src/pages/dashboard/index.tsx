@@ -78,7 +78,7 @@ const Dashboard = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            gap: 2,
+            gap:1,
             height:"100%",
             justifyContent:"space-between",
             gridColumn: "span 4 / span 12",

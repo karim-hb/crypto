@@ -58,12 +58,11 @@ const TableWidget = () => {
                   <Box
                     sx={{
                       display: "flex",
-                      flexDirection: "column",
                       svg: { cursor: "pointer" },
                     }}
                   >
-                    <ArrowDropUpIcon sx={{ mb: "-15px", color: "#4CAF50" }} />
-                    <ArrowDropDownIcon sx={{ color: "#E53935" }} />
+                    <ArrowDropUpIcon sx={{ mb: "-15px", color: "#4CAF50",ml:"-6px" }} />
+                    <ArrowDropDownIcon sx={{ color: "#E53935" , ml:"-10px"}} />
                   </Box>
                 </TableCell>
                 <TableCell align="left">Coin</TableCell>

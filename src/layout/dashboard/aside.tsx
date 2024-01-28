@@ -105,7 +105,7 @@ const Aside = () => {
                     sx={itemStyle}
                   >
                     <Typography variant="subtitle1">-</Typography>
-                    <Typography variant="subtitle1">transactions</Typography>
+                    <Typography variant="subtitle1">Transactions</Typography>
                   </Box>
                 </Link>{" "}
                 <Link to="/dashboard/withraw">
@@ -116,7 +116,7 @@ const Aside = () => {
                     sx={itemStyle}
                   >
                     <Typography variant="subtitle1">-</Typography>
-                    <Typography variant="subtitle1">withraw</Typography>
+                    <Typography variant="subtitle1">Withraw</Typography>
                   </Box>
                 </Link>
               </Box>

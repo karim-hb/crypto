@@ -22,7 +22,7 @@ const Header = () => {
       }}
       component={"header"}
     >
-      <Box sx={{ maxWidth: "1370px", mx: "auto", px: "10px", mb: 1 }}>
+      <Box sx={{ maxWidth: "1280px", mx: "auto", px: "10px", mb: 1 }}>
         <Box
           sx={{
             display: "flex",
@@ -30,6 +30,13 @@ const Header = () => {
             px: { md: "30px" },
           }}
         >
+          {" "}
+          {!isMd && (
+            <MenuIcon
+              onClick={() => setOpenD(true)}
+              sx={{ color: "#fff", ml: 1 }}
+            />
+          )}
           <Box
             sx={{
               display: "flex",
@@ -37,22 +44,23 @@ const Header = () => {
               justifyContent: { md: "center" },
               flexDirection: "row",
               alignItems: "center",
+              mt:{xs:'3px',md:'6px'}
             }}
           >
-            {!isMd && (
-              <MenuIcon
-                onClick={() => setOpenD(true)}
-                sx={{ color: "#fff", ml: 1 }}
-              />
-            )}
             <Link to="/">
               <img
-                style={{ maxWidth: isMd ? "auto" : "119px", maxHeight: "35px" }}
+                style={{ maxWidth: isMd ? "168px" : "119px", maxHeight: "35px" }}
                 src="/images/GetRichex Logo Site PSD.png"
                 alt="user_icon"
               />
             </Link>
           </Box>{" "}
+          {!isMd && (
+            <MenuIcon
+              onClick={() => setOpenD(true)}
+              sx={{ color: "#fff", ml: 1 , visibility:"hidden" }}
+            />
+          )}
           {isMd && <Nav />}
         </Box>
       </Box>

@@ -94,7 +94,7 @@ const RadarChart = () => {
 
 
  */}{" "}
-      <Box sx={{ display: "flex", position: "relative" }}>
+      <Box sx={{ display: "flex", position: "relative" , maxWidth:"200px" , m:'auto' }}>
         {" "}
         <Doughnut data={data} options={options} />
         <Box sx={{position:"absolute" , right:"50%" , top:"50%" , transform:"translate(50%,-50%)" , display:"flex" , flexDirection:"column" , justifyContent:"center" , alignItems:"center"}}>
@@ -108,7 +108,7 @@ const RadarChart = () => {
 };
 var options = {
   cutoutPercentage: 20,
-  cutout: 135,
+  cutout: 90,
 };
 export default RadarChart;
 export const data = {

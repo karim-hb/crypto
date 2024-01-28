@@ -10,9 +10,9 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import ForwardToInboxIcon from "@mui/icons-material/ForwardToInbox";
-import LiveHelpIcon from '@mui/icons-material/LiveHelp';
+import LiveHelpIcon from "@mui/icons-material/LiveHelp";
 import { Link } from "react-router-dom";
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 const Help = () => {
   return (
     <Paper
@@ -26,14 +26,16 @@ const Help = () => {
             flexDirection: "column",
             gap: 4,
             px: 3,
-            py:{md: 1 , xs:4},
-            mt: { md: 5 , },
+            py: { md: 1, xs: 4 },
+            mt: { md: 5 },
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
           }}
         >
-          <Typography className="custome_h1"  variant="h1">What can we help you with ?</Typography>
+          <Typography className="custome_h1" variant="h1">
+            What can we help you with ?
+          </Typography>
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <TextField
               sx={{ background: "#414141", width: { sm: "400px", xs: "100%" } }}
@@ -47,7 +49,7 @@ const Help = () => {
               variant="outlined"
               placeholder="Type your question here ..."
             />{" "}
-            <Button sx={{ display: "flex", gap: 1 }} variant="contained">
+            <Button sx={{ display: "flex", gap: 1 , height:"54px !important" }} variant="contained">
               <span>search </span>
             </Button>
           </Box>
@@ -55,33 +57,36 @@ const Help = () => {
             sx={{
               maxWidth: "900px",
               display: "grid",
-              gridTemplateColumns: { md: "1fr 1fr 1fr ", gap: '20px' },
+              mt: 3,
+              gridTemplateColumns: { md: "1fr 1fr 1fr ", gap: "20px" },
             }}
           >
-              <Link to="/contact">
+            <Link to="/contact">
               <Box sx={CartStyle}>
                 <ForwardToInboxIcon />
-                <Typography variant="h5">Contact Us</Typography>{" "}
+                <Typography variant="h5">Category Title 1</Typography>{" "}
                 <Typography variant="subtitle1">
-                  Contact us through a specially prepared form.
+                  Description description description description description{" "}
                 </Typography>
               </Box>
             </Link>
             <Link to="/faq">
               <Box sx={CartStyle}>
                 <LiveHelpIcon />
-                <Typography variant="h5">FAQ's</Typography>{" "}
+                <Typography variant="h5">Category Title 2</Typography>{" "}
                 <Typography variant="subtitle1">
-              Have any questions about general setup or your license key ? find the answers to all of them.
+                Description description description description description{" "}
+
                 </Typography>
               </Box>
             </Link>
             <Link to="/about">
               <Box sx={CartStyle}>
                 <AccountBalanceIcon />
-                <Typography variant="h5">About Us</Typography>{" "}
+                <Typography variant="h5">Category Title 3</Typography>{" "}
                 <Typography variant="subtitle1">
-                Why should we use GETRICHEX?                </Typography>
+                Description description description description description{" "}
+                </Typography>
               </Box>
             </Link>
           </Box>
@@ -98,12 +103,12 @@ const CartStyle = {
   flexDirection: "column",
   justifyItems: "center",
   alignItems: "center",
-  background: "#000",
+  background: "#303030",
   borderRadius: "6px",
-  padding: "10px 15px",
+  padding: "30px 15px",
   width: "100%",
   gap: 2,
-  minHeight: "250px",
+  minHeight: "300px",
   svg: {
     width: "100px",
     fontSize: "80px",

@@ -56,7 +56,7 @@ const BlogWidget = () => {
                   },
                 }}
               >
-                <TableCell align="left">#</TableCell>
+            {/*     <TableCell align="left">#</TableCell> */}
                 <TableCell align="left">Time </TableCell>
                 <TableCell align="left">Title</TableCell>
               </TableRow>
@@ -67,10 +67,10 @@ const BlogWidget = () => {
                   key={row.title}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
-                  <TableCell component="th" scope="row">
+               {/*    <TableCell component="th" scope="row">
                     {index}
-                  </TableCell>{" "}
-                  <TableCell align="left">{row.Date}</TableCell>
+                  </TableCell>{" "} */}
+                  <TableCell sx={{width:"170px"}} align="left">{row.Date}</TableCell>
                   <TableCell align="left">{row.title}</TableCell>
                 </TableRow>
               ))}

@@ -44,7 +44,7 @@ const Blogs = () => {
           }}
         >
           {" "}
-          <Typography className="custome_h1" variant="h1">Blogs </Typography>{" "}
+          <Typography className="custome_h1" variant="h1">Blog </Typography>{" "}
           <Box
             sx={{
               display: "flex",

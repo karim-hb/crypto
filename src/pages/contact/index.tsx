@@ -48,6 +48,7 @@ const Contact = () => {
                 gap: "10px",
                 mt: 4,
                 position: "absolute",
+                width:"100%"
               }}
             >
               <Box
@@ -55,6 +56,8 @@ const Contact = () => {
                   display: "grid",
                   gridTemplateColumns: { md: "1fr " },
                   gap: "10px",
+                  minWidth:{md:"400px" , xs:"100%"},
+                  width:"100%"
                 }}
               >
                 <TextField
@@ -105,12 +108,12 @@ const Contact = () => {
                 />
               </Box>
               <Box sx={{ display: "flex", gap: 2, mt: 2 }}>
-                <Button sx={{ display: "flex", gap: 1 }} variant="contained">
-                  <span>Sumbit</span>
+                <Button sx={{ display: "flex", gap: 1  , minWidth:{md:"200px"}}} variant="contained">
+                  <span>Send Message</span>
 
                   <img src="/images/arrow.svg" alt="" />
                 </Button>
-                <Button
+             {/*    <Button
                   sx={{ display: "flex", gap: 1 }}
                   variant="outlined"
                   color="inherit"
@@ -119,7 +122,7 @@ const Contact = () => {
                   <span>Login to your account</span>
 
                   <img src="/images/arrowW.svg" alt="" />
-                </Button>
+                </Button> */}
               </Box>{" "}
             </Box>
           </Box>
